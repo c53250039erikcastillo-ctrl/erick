@@ -1,0 +1,261 @@
+
+/* CONFIGURACIÓN GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f6f8;
+    color: #17243c;
+}
+
+/* ENCABEZADO */
+header {
+    background-color: #101d36;
+    color: white;
+    padding: 15px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+}
+
+.logo h1 {
+    font-size: 23px;
+    letter-spacing: 2px;
+}
+
+nav {
+    display: flex;
+    gap: 22px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #d5b45b;
+}
+
+/* PORTADA */
+.principal {
+    min-height: 480px;
+    background: linear-gradient(
+        rgba(10, 24, 48, 0.65),
+        rgba(10, 24, 48, 0.65)
+    ), url("imagenes/estadio.jpg");
+
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 30px;
+}
+
+.contenido-principal h2 {
+    font-size: 65px;
+    letter-spacing: 5px;
+    color: #e5c46b;
+}
+
+.contenido-principal p {
+    font-size: 20px;
+    margin: 20px 0 30px;
+}
+
+.boton {
+    background-color: #d5b45b;
+    color: #101d36;
+    padding: 13px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.boton:hover {
+    background-color: white;
+}
+
+/* SECCIONES */
+.seccion {
+    padding: 65px 9%;
+    text-align: center;
+}
+
+.seccion h2 {
+    font-size: 32px;
+    margin-bottom: 25px;
+    color: #101d36;
+}
+
+.seccion p {
+    line-height: 1.7;
+}
+
+/* HISTORIA */
+.historia-contenido {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    text-align: left;
+    margin-top: 30px;
+}
+
+.historia-contenido img {
+    width: 45%;
+    border-radius: 12px;
+}
+
+.historia-contenido p {
+    margin-bottom: 15px;
+}
+
+/* LEYENDAS */
+.fondo {
+    background-color: #e9edf4;
+}
+
+.descripcion {
+    margin-bottom: 30px;
+}
+
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.tarjeta {
+    background-color: white;
+    padding: 30px 18px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-7px);
+}
+
+.tarjeta h3 {
+    color: #b08d37;
+    margin-bottom: 15px;
+}
+
+/* PALMARÉS */
+.logros {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.logros div {
+    background-color: #101d36;
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 250px;
+}
+
+.logros h3 {
+    color: #e5c46b;
+    margin-bottom: 12px;
+}
+
+/* ESTADIO */
+.estadio img {
+    width: 75%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+/* PIE DE PÁGINA */
+footer {
+    background-color: #101d36;
+    color: white;
+    text-align: center;
+    padding: 35px 15px;
+}
+
+footer h2 {
+    color: #e5c46b;
+    margin-bottom: 15px;
+}
+
+footer p {
+    margin: 8px;
+}
+
+/* DISEÑO PARA CELULARES */
+@media (max-width: 800px) {
+    header {
+        justify-content: center;
+        gap: 20px;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    .contenido-principal h2 {
+        font-size: 40px;
+    }
+
+    .historia-contenido {
+        flex-direction: column;
+    }
+
+    .historia-contenido img {
+        width: 100%;
+    }
+
+    .tarjetas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .estadio img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .tarjetas {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        gap: 12px;
+    }
+
+    .contenido-principal h2 {
+        font-size: 32px;
+    }
+}
